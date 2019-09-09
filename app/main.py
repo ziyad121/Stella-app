@@ -34,9 +34,9 @@ def index():
     for entry in container_list:
         print("******")
         print(entry)
-        if entry!="elastic1":
-            container = client.containers.get(entry)
-            exec_res = container.exec_run(cmd)
+
+        container = client.containers.get(entry)
+        exec_res = container.exec_run(cmd)
 
 
 @app.route("/")
