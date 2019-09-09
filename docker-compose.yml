@@ -49,5 +49,6 @@ services:
       container_name: elastic
       volumes:
         - ~/data/sample/:/data/
+      tty: true
 
 
