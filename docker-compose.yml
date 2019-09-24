@@ -43,5 +43,5 @@ services:
             - ~/data/sample/:/data/
           tty: true
 
-
-
+networks:
+  esnet:
