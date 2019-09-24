@@ -9,22 +9,22 @@ services:
           depends_on:
             - solr
             - lucene
-            - elasticsearch
+#            - elasticsearch
             - elastic
           networks: 
             - esnet
           
-    elasticsearch:
-          container_name: elasticsearch
-          image: docker.elastic.co/elasticsearch/elasticsearch:7.0.1
-          volumes:
-              - ~/data/sample/:/data/
-          ports:
-              - 9300:9300
-              - 9200:9200
-          networks: 
-              - esnet  
-          command: ["sudo sysctl -w vm.max_map_count=262144"]
+#    elasticsearch:
+#          container_name: elasticsearch
+#          image: docker.elastic.co/elasticsearch/elasticsearch:7.0.1
+#          volumes:
+#              - ~/data/sample/:/data/
+#          ports:
+#              - 9300:9300
+#              - 9200:9200
+#          networks: 
+#              - esnet  
+#          command: ["sudo sysctl -w vm.max_map_count=262144"]
               
     solr:
           build: https://github.com/stella-project/solr-docker.git
