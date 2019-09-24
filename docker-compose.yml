@@ -36,12 +36,12 @@ services:
           volumes:
             - ~/data/sample/:/data/
 
-    pylastic:
+    elastic:
           build: https://github.com/ziyad121/elastic-docker.git
-          container_name: pylastic
+          container_name: elastic
           volumes:
             - ~/data/sample/:/data/
-          tty: true
+           tty: true
 
 networks:
   esnet:
