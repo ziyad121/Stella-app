@@ -10,7 +10,7 @@ services:
             - solr
             - lucene
             - elasticsearch
-            - pylastic
+            - elastic
           networks: 
             - esnet
           
