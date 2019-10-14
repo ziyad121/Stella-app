@@ -10,12 +10,16 @@ services:
             - solr
             - lucene
             - elastic
+          networks: 
+            - backend
+            
     elasticsearch:
           image: docker.elastic.co/elasticsearch/elasticsearch:6.8.0
           ports:
             - 9200:9200
           networks: 
             - backend
+            
     solr:
           build: https://github.com/stella-project/solr-docker.git
           container_name: solr
@@ -40,5 +44,5 @@ services:
           tty: true
 networks:
   backend:
-    driver: "bridge"
+
 
