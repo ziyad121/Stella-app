@@ -32,7 +32,7 @@ services:
           container_name: elastic
           volumes:
             - ~/data/sample/:/data/
-          depends_on:
+            links:
             - elasticsearch
           tty: true
 
