@@ -29,7 +29,7 @@ def index():
     client = docker.DockerClient(base_url='unix://var/run/docker.sock')
     container_list = list(container_dict.keys())
 
-    cmd = 'python /script/index'
+    cmd = 'python3 /script/index'
 
     for entry in container_list:
         print("******")
@@ -74,7 +74,7 @@ def ranking(query):
     container = client.containers.get(least_served)
 
 
-    cmd = 'python /script/search ' + query
+    cmd = 'python3 /script/search ' + query
     print("****************")
 
     exec_res = container.exec_run(cmd)
@@ -92,7 +92,7 @@ def test(container_name):
         print(container_name)
         container = client.containers.get(container_name)
 
-        cmd = 'python /script/test'
+        cmd = 'python3 /script/test'
 
         out = container.exec_run(cmd)
 
