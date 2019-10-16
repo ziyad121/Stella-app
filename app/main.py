@@ -81,7 +81,7 @@ def ranking(query):
     print(exec_res)
     exec_dict = json.loads(exec_res.output.decode("utf-8"))
 
-    return jsonify(contanaier_name=container,exec_dict)
+    return jsonify(container_name=container,result=exec_dict)
 
 
 @app.route("/stella/api/site/test/<string:container_name>", methods=["GET"])
