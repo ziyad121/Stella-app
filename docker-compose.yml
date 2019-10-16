@@ -13,13 +13,13 @@ services:
             
             
     solr:
-          build: https://github.com/stella-project/solr-docker.git
+          build: https://github.com/ziyad121/solr-docker.git
           container_name: solr
           volumes:
             - ~/data/sample/:/data/
 
-    lucene:
-          build: https://github.com/stella-project/lucene-ranker-docker.git
+    lucene: 
+          build:  https://github.com/ziyad121/lucene-ranker-docker.git
           container_name: lucene
           volumes:
             - ~/data/sample/:/data/
