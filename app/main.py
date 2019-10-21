@@ -79,7 +79,7 @@ def ranking(query):
     exec_res = container.exec_run(cmd)
     
     #print(exec_res)
-    exec_dict = {'name':str(least_served)}
+    exec_dict = {'Container':str(least_served)}
     exec_dict.update(json.loads(exec_res.output.decode("utf-8")))
     return jsonify(exec_dict)
 
