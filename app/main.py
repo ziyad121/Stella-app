@@ -80,8 +80,8 @@ def ranking(query):
     exec_res = container.exec_run(cmd)
     print(exec_res)
     exec_dict = json.loads(exec_res.output.decode("utf-8"))
-    s = {"container_name":container}
-    s = s.append(jsonify(exec_dict))
+    s = jsonify(exec_dict)
+    s[0]['name'] = container
     return s
 
 
