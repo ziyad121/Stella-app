@@ -76,12 +76,11 @@ def ranking(query):
 
     cmd = 'python3 /script/search ' + query
     print("****************")
-    s= {'name':str(least_served)}
     exec_res = container.exec_run(cmd)
     
     #print(exec_res)
-    exec_dict = json.loads(exec_res.output.decode("utf-8"))
-    exec_dict.update(s)
+    exec_dict = {'name':str(least_served)}
+    exec_dict.update(json.loads(exec_res.output.decode("utf-8")))
     return jsonify(exec_dict)
 
 
