@@ -76,7 +76,7 @@ def ranking(query):
 
     cmd = 'python3 /script/search ' + query
     print("****************")
-    s= {'name':str(container)}
+    s= {'name':str(least_served)}
     exec_res = container.exec_run(cmd)
     
     #print(exec_res)
