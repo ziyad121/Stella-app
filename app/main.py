@@ -7,7 +7,7 @@ from flask import Flask, jsonify, request
 app = Flask(__name__)
 
 
-container_dict = {"elastic":{"requests":0},"lucene": {"requests": 0},
+container_dict = {"lucene": {"requests": 0},
                   "solr": {"requests": 0}}
 
 
